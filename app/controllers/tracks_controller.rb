@@ -13,6 +13,7 @@ class TracksController < ApplicationController
   # GET /tracks/new
   def new
     @track = Track.new
+    @record = Record.find(params[:record_id])
   end
 
   # GET /tracks/1/edit
@@ -21,10 +22,13 @@ class TracksController < ApplicationController
 
   # POST /tracks
   def create
+    @record = Record.find(params[:record_id])
+    
     @track = Track.new(track_params)
+    @track.record = @record
 
     if @track.save
-      redirect_to @track, notice: 'Track was successfully created.'
+      redirect_to @record, notice: 'Track was successfully created.'
     else
       render :new
     end

@@ -10,6 +10,17 @@
   <%= @record.author %>
 </p>
 
+<p>
+  <strong>Tracks:</strong>
+  <ul>
+  <% @record.tracks.each do |track| %>
+    <li><%= track.position %>: <%= track.name %></li>
+  <% end %>
+  </ul>
+  <%= link_to 'Add Track', new_record_track_path(@record) %>
+</p>
+
+
 <% @record.photos.each do |photo| %>
   <%= cl_image_tag photo.key, height: 400, width: 400, crop: :fill %>
 <% end %>
