@@ -10,5 +10,8 @@
   <%= @record.author %>
 </p>
 
+<%= cl_image_tag @record.photo.key, height: 300, width: 300, crop: :fill %>
+
+
 <%= link_to 'Edit', edit_record_path(@record) %> |
 <%= link_to 'Back', records_path %>
