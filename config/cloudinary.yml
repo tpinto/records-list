@@ -10,8 +10,7 @@ production:
   api_secret: "COzib19YGEqkusNLw3roc19-Nik"
   secure: true
 test:
-  cloud_name: bm4l2f1pq
-  api_key: '384786930741074'
-  api_secret: "-LladYP3cuLWz1QM3o_wpofEaWI"
-  enhance_image_tag: true
-  static_file_support: false
+  cloud_name: "tiagopinto"
+  api_key: "557796252682857"
+  api_secret: "COzib19YGEqkusNLw3roc19-Nik"
+  secure: true
